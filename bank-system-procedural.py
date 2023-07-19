@@ -35,7 +35,7 @@ while True:
                       f'Seu saldo atual é de R$: {saldo:.2f}')
 
             else:
-                print(f"{cores['vermelho']}Operação falhou! O valor informado é inválido.")
+                print(f"{cores['vermelho']}Operação falhou! O valor informado é inválido.{cores['limpar']}")
 
         case 2:  # Sacar
             valor = float(input("Informe o valor a sacar R$: "))
@@ -65,7 +65,7 @@ while True:
                 print(f"{cores['vermelho']}Valor inválido!{cores['limpar']}")
 
         case 3:  # Exibir extrato
-            print("\n" + "=" * 12 + " EXTRATO " + "=" * 12)
+            print("\n" + " EXTRATO ".center(33, "="))
             print("Não foram realizadas movimentações." if not extrato else extrato)
             print(f"Saldo Total: R$ {saldo:.2f}")
             print("="*33)
