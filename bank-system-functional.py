@@ -74,11 +74,10 @@ def exibir_extrato(saldo, /, *, extrato):
 
 def criar_usuario(usuarios):
     cpf = input("Informe o CPF (somente números): ")
-    try:
-        if usuarios[cpf]:
-            print(f"\n{cores['vermelho']}Usuário com CPF: {cpf} já possui cadastro!{cores['limpar']}")
 
-    except KeyError:
+    if usuarios.get(cpf):
+        print(f"\n{cores['vermelho']}Usuário com CPF: {cpf} já possui cadastro!{cores['limpar']}")
+    else:
         nome = input("Informe o nome completo: ")
         data_nascimento = input("Informe a data de nascimento (dd-mm-aaaa): ")
         endereco = input("Informe o endereço (logradouro, nro - bairro - cidade/sigla estado): ")
@@ -96,7 +95,8 @@ def criar_conta(agencia, contas, usuarios):
 
     except KeyError:
         print(f"\n{cores['vermelho']}Usuário não encontrado!\n"
-              f"É preciso ser cadastrado para criar uma nova conta!{cores['limpar']}")
+              "É preciso ser cadastrado para criar uma nova conta!\n"
+              f"Para criar uma novo usuário selecione a opcao 4!{cores['limpar']}")
 
 
 def listar_contas(contas):
