@@ -52,7 +52,7 @@ while True:
 
                 elif numero_saques >= LIMITE_SAQUES:
                     print(f"{cores['vermelho']}Operação inválida! "
-                          f"Você atingiu seu limite máximo de saques.{cores['limpar']}")
+                          f"Você atingiu o seu limite máximo de saques diário.{cores['limpar']}")
 
                 else:
                     saldo -= valor
@@ -79,3 +79,4 @@ while True:
 
         case _:
             print(f"{cores['vermelho']}Opção inválida! Informe uma opção de 1 a 4!{cores['limpar']}")
+            
