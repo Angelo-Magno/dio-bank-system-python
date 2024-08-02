@@ -18,9 +18,8 @@ class Banco:
         print('\n======== Clientes Pessoa Física ========')
         for cliente in self.clientes_pf.values():
             print(f'Cliente: {cliente.nome}, CPF: {cliente.cpf}')
-            cliente.listar_contas()
         
-        print('\n======== Clientes Pessoa Física ========')
+        print('\n======== Clientes Pessoa Jurídica ========')
         for cliente in self.clientes_pj.values():
             print(f'Cliente: {cliente.razao_social}, CNPJ: {cliente.cnpj}')
-            cliente.listar_contas()
+    
